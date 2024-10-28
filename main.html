@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM Carter - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="login">
+        <h1>LOGIN</h1>
+        <p>Digite seu nome de login para entrar.</p>
+        <input id="input" type="text">
+        <button onclick=logar()>Entrar
+
+            <script>
+                const inputv = document.getElementById("input")
+
+                function logar() {
+                    if (inputv.value == "Ademir") {
+                        localStorage.setItem("nome", inputv.value)
+                        window.location.href = "ademir.html"
+                    }
+                }
+            </script>
+        </button>
+
+        <script>
+            inputv.value = localStorage.getItem("nome")
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(223, 223, 223);
+}
+
+#navbar {
+    background-color: rgb(255, 255, 255);
+    padding: 1px;
+    padding-left: 10px;
+    font-weight: 600;
+    border-bottom: 2px solid  rgb(102, 0, 255);
+    border-radius: 5px;
+}
+
+#navbar h3 {
+    position: relative;
+    color:  rgb(102, 0, 255);
+}
+
+#usuario {
+    position: absolute;
+    top: 5px;
+    left: 250px;
+    color: rgb(102, 0, 255);
+}
+
+#desc {
+    font-size: 14px;
+    color: rgb(134, 134, 134);
+}
+
+#ficha {
+    padding-top: 20px;
+    padding-left: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    overflow-x: scroll;
+}
+
+#treino_a, #treino_b, #treino_c, #treino_d, #treino_e{
+    padding-top: 15px;
+    padding-left: 40px;
+    width: 170%;
+    height: 460px;
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(102, 0, 255);
+    border-radius: 20px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.65);
+    font-size: 12px
+}
+
+#treino_a input, #treino_b input, #treino_c input, #treino_d input, #treino_e input{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#salvar {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(101, 0, 255);
+    color: white;
+}
