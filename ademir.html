@@ -5,12 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYM Carter - Ficha</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="config.css">
 </head>
 <body id="body">
     <div id="navbar">
         <h3>CarterGYM</h3>
         <p id="usuario">Ademir Carter</p>
+        <button id="config-open" onclick=config_open()>⚙️</button>
         <p id="desc">Olá, querido aluno, tenha um bom treino hoje e usufrua sua ficha de treino</p>
+
+        <script>
+            function config_open() {
+                document.getElementById("config").style.display = "block"
+            }
+        </script>
+
+    </div>
+
+    <div id="config">
+        <h3>Configurações</h3>
+        <button id="dark" onclick=dark()>Modo Escuro</button>
+        <button id="config-close" onclick=config_close()>⚙️</button>
+
+        <script>
+            function dark() {
+                if (localStorage.getItem("darkmode") == "branco") {
+                    localStorage.setItem("darkmode", "preto")
+                }
+                else {
+                    localStorage.setItem("darkmode", "branco")
+                }
+            }
+
+            if (localStorage.getItem("darkmode") == "preto") {
+                document.body.style.backgroundColor = "rgb(32, 31, 41)"
+                document.getElementById("navbar").style.backgroundColor = "rgb(21, 19, 37)"
+                document.getElementById("config").style.backgroundColor = "rgb(21, 19, 37)"
+                document.getElementById("config").style.color = "white"
+            }
+            else {
+                
+                document.body.style.backgroundColor = "rgb(223, 223, 223)"
+                document.getElementById("navbar").style.backgroundColor = "white"
+                document.getElementById("config").style.backgroundColor = "white"
+            }
+            
+        </script>
+
+        <script>
+            function config_close() {
+                document.getElementById("config").style.display = "none"
+            }
+        </script>
     </div>
 
     <div id="ficha">

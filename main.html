@@ -26,6 +26,19 @@
         </button>
 
         <script>
+            const login = document.getElementById("login")
+
+            if (localStorage.getItem("darkmode") == "preto") {
+                console.log(localStorage.getItem("darkmode"))
+
+                login.style.color = "white"
+                login.style.backgroundColor = "rgb(21, 19, 37)"
+                document.body.style.backgroundColor = "rgb(32, 31, 41)"
+            }
+            else {
+                console.log(localStorage.getItem("darkmode"))
+            }
+
             inputv.value = localStorage.getItem("nome")
         </script>
     </div>
