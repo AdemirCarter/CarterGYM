@@ -1,6 +1,6 @@
 
 @media screen and (max-width: 480px) {
-    #config{
+    #config-menu{
         background-color: white;
         position: absolute;
         top: 0px;
@@ -8,19 +8,19 @@
         width: 1px;
         border-radius: 10px;
         overflow: hidden;
-        border-right: 2px solid rgb(77, 113, 255);
+        border-right: 2px solid rgba(0, 0, 0, 0.467);
         z-index: 1;
         transition: .2s;
     }
     
-    #config h3 {
+    #config-menu h3 {
         position: relative;
         top: 20px;
         left: 10px;
         font-size: 15px;
     }
     
-    #config #dark {
+    #config-menu #dark {
         position: relative;
         top: 40px;
         left: 10px;
@@ -29,15 +29,5 @@
         border-radius: 10px;
         border: none;
         color: white;
-    }
-
-    #config #config-close {
-        position: relative;
-        padding: 2px;
-        bottom: 20px;
-        left: 28px;
-        background-color: transparent;
-        border: 1px solid rgb(77, 113, 255);
-        border-radius: 100%;
     }
 }
