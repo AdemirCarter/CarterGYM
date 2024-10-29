@@ -31,9 +31,11 @@
             function dark() {
                 if (localStorage.getItem("darkmode") == "branco") {
                     localStorage.setItem("darkmode", "preto")
+                    location.reload()
                 }
                 else {
                     localStorage.setItem("darkmode", "branco")
+                    location.reload()
                 }
             }
 
@@ -42,6 +44,7 @@
                 document.getElementById("navbar").style.backgroundColor = "rgb(21, 19, 37)"
                 document.getElementById("config").style.backgroundColor = "rgb(21, 19, 37)"
                 document.getElementById("config").style.color = "white"
+                
             }
             else {
                 
@@ -385,6 +388,8 @@
                 localStorage.setItem("rosca_alt2-peso", rosca_alt2_peso.value)
                 localStorage.setItem("martelo-peso", martelo_peso.value)
                 localStorage.setItem("rosca_45-peso", rosca_45_peso.value)
+
+                location.reload()
             }
         </script>
     </button>
