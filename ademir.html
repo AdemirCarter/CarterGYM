@@ -16,50 +16,11 @@
 
         <script>
             function config_open() {
-                document.getElementById("config").style.display = "block"
+                document.getElementById("config").style.width = "170px"
+                document.getElementById("config").style.overflow = "visible"
             }
         </script>
 
-    </div>
-
-    <div id="config">
-        <h3>Configurações</h3>
-        <button id="dark" onclick=dark()>Modo Escuro</button>
-        <button id="config-close" onclick=config_close()>⚙️</button>
-
-        <script>
-            function dark() {
-                if (localStorage.getItem("darkmode") == "branco") {
-                    localStorage.setItem("darkmode", "preto")
-                    location.reload()
-                }
-                else {
-                    localStorage.setItem("darkmode", "branco")
-                    location.reload()
-                }
-            }
-
-            if (localStorage.getItem("darkmode") == "preto") {
-                document.body.style.backgroundColor = "rgb(32, 31, 41)"
-                document.getElementById("navbar").style.backgroundColor = "rgb(21, 19, 37)"
-                document.getElementById("config").style.backgroundColor = "rgb(21, 19, 37)"
-                document.getElementById("config").style.color = "white"
-                
-            }
-            else {
-                
-                document.body.style.backgroundColor = "rgb(223, 223, 223)"
-                document.getElementById("navbar").style.backgroundColor = "white"
-                document.getElementById("config").style.backgroundColor = "white"
-            }
-            
-        </script>
-
-        <script>
-            function config_close() {
-                document.getElementById("config").style.display = "none"
-            }
-        </script>
     </div>
 
     <div id="ficha">
@@ -239,6 +200,79 @@
             <input type="text" id="rosca_45-peso" size="1" placeholder="Peso">
         </div>
         <br><br><br>
+    </div>
+
+    <div id="config">
+        <h3>Configurações</h3>
+        <button id="dark" onclick=dark()>Modo Escuro</button>
+        <button id="config-close" onclick=config_close()>⚙️</button>
+
+        <script>
+            let treinos = {
+                treino_a: document.getElementById("treino_a"),
+                treino_b: document.getElementById("treino_b"),
+                treino_c: document.getElementById("treino_c"),
+                treino_d: document.getElementById("treino_d"),
+                treino_e: document.getElementById("treino_e")
+            }
+
+            function dark() {
+                if (localStorage.getItem("darkmode") == "branco") {
+                    localStorage.setItem("darkmode", "preto")
+                    location.reload()
+                }
+                else {
+                    localStorage.setItem("darkmode", "branco")
+                    location.reload()
+                }
+            }
+
+            if (localStorage.getItem("darkmode") == "preto") {
+                document.body.style.backgroundColor = "rgb(28, 31, 43)"
+                document.getElementById("navbar").style.backgroundColor = "rgb(20, 22, 31)"
+                document.getElementById("config").style.backgroundColor = "rgb(20, 22, 31)"
+                document.getElementById("config").style.color = "white"
+
+                treinos.treino_a.style.color = "white"
+                treinos.treino_b.style.color = "white"
+                treinos.treino_c.style.color = "white"
+                treinos.treino_d.style.color = "white"
+                treinos.treino_e.style.color = "white"
+                
+                treinos.treino_a.style.backgroundColor = "rgb(20, 22, 31)"
+                treinos.treino_b.style.backgroundColor = "rgb(20, 22, 31)"
+                treinos.treino_c.style.backgroundColor = "rgb(20, 22, 31)"
+                treinos.treino_d.style.backgroundColor = "rgb(20, 22, 31)"
+                treinos.treino_e.style.backgroundColor = "rgb(20, 22, 31)"
+                
+            }
+            else {
+                
+                document.body.style.backgroundColor = "rgb(223, 223, 223)"
+                document.getElementById("navbar").style.backgroundColor = "white"
+                document.getElementById("config").style.backgroundColor = "white"
+                
+                treinos.treino_a.style.color = "black"
+                treinos.treino_b.style.color = "black"
+                treinos.treino_c.style.color = "black"
+                treinos.treino_d.style.color = "black"
+                treinos.treino_e.style.color = "black"
+                
+                treinos.treino_a.style.backgroundColor = "white"
+                treinos.treino_b.style.backgroundColor = "white"
+                treinos.treino_c.style.backgroundColor = "white"
+                treinos.treino_d.style.backgroundColor = "white"
+                treinos.treino_e.style.backgroundColor = "white"
+            }
+            
+        </script>
+
+        <script>
+            function config_close() {
+                document.getElementById("config").style.width = "0px"
+                document.getElementById("config").style.overflow = "hidden"
+            }
+        </script>
     </div>
 
     <!-- Salvar Dados-->
